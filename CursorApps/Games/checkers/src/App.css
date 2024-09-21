@@ -1,0 +1,99 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.board {
+  display: inline-block;
+  margin-top: 20px;
+  border: 2px solid #000; /* גבול ללוח */
+}
+
+.row {
+  display: flex;
+}
+
+.square {
+  width: 50px; /* גודל הריבוע */
+  height: 50px; /* גובה הריבוע */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; /* שינוי הסמן ליד */
+}
+
+.black {
+  background-color: #f0c040; /* צבע חום בהיר */
+}
+
+.white {
+  background-color: #ffeb3b; /* צבע צהוב */
+}
+
+.reset-button {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.black-square {
+  background-color: #f0c040; /* צבע חום בהיר */
+}
+
+.white-square {
+  background-color: #ffeb3b; /* צבע צהוב */
+}
+
+.turn-indicator {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.flashing {
+  animation: flash 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes flash {
+  from {
+    background-color: yellow;
+  }
+  to {
+    background-color: transparent;
+  }
+}
